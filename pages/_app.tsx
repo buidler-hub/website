@@ -2,12 +2,25 @@ import { ChakraProvider } from '@chakra-ui/react';
 import '@fontsource/syncopate';
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
+import Script from 'next/script';
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
     return (
-        <ChakraProvider>
-            <Component {...pageProps} />
-        </ChakraProvider>
+        <>
+            {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL &&
+                process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+                    <Script
+                        src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+                        data-website-id={
+                            process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
+                        }
+                        strategy="lazyOnload"
+                    />
+                )}
+            <ChakraProvider>
+                <Component {...pageProps} />
+            </ChakraProvider>
+        </>
     );
 };
 
