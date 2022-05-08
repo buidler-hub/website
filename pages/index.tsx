@@ -1,12 +1,13 @@
 import Header from '../components/Header';
-import { VStack, Box, Text, Button, Flex } from '@chakra-ui/react';
+import { VStack, Box, Text, Button, Flex, Image } from '@chakra-ui/react';
 import { FC } from 'react';
 
 const Home: FC = () => {
     return (
         <VStack
-            w="100vw"
-            h="100vh"
+            minW="100vw"
+            minH="100vh"
+            overflowX="hidden"
             gap="28"
             bg="#010101"
             fontFamily="Monument Extended"
@@ -36,6 +37,24 @@ const Home: FC = () => {
                         our projects
                     </Button>
                 </Flex>
+
+                <Image
+                    src="/assets/blob1.svg"
+                    height="60"
+                    width="60"
+                    position="absolute"
+                    bottom="0"
+                    left="0"
+                />
+
+                <Image
+                    src="/assets/blob2.svg"
+                    height="60"
+                    width="60"
+                    position="absolute"
+                    bottom="0"
+                    right="0"
+                />
             </Box>
         </VStack>
     );
