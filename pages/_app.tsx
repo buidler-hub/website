@@ -1,8 +1,11 @@
+import '../styles/fonts.css';
+import theme from '../styles/theme.chakra';
 import { ChakraProvider } from '@chakra-ui/react';
 import '@fontsource/syncopate';
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
+import NextNProgress from 'nextjs-progressbar';
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
     return (
@@ -17,7 +20,8 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
                         strategy="lazyOnload"
                     />
                 )}
-            <ChakraProvider>
+            <NextNProgress />
+            <ChakraProvider theme={theme}>
                 <Component {...pageProps} />
             </ChakraProvider>
         </>

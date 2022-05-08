@@ -4,9 +4,9 @@ import { useRouter } from 'next/router';
 
 const Header = () => {
     const links = [
-        { name: 'Home', route: '/' },
-        { name: 'Projects', route: '/projects' },
-        { name: 'Team', route: '/team' },
+        { name: 'home', route: '/' },
+        { name: 'projects', route: '/projects' },
+        { name: 'team', route: '/team' },
     ];
 
     const router = useRouter();
@@ -19,10 +19,11 @@ const Header = () => {
             px={['10', '5']}
             py="5"
             color="white"
-            fontWeight="extrabold"
+            fontWeight="normal"
+            fontFamily="Monument Extended"
         >
             <Text as="p">buidler&apos;s hub.</Text>
-            <Flex gap="10px" display={{ base: 'none', lg: 'flex' }}>
+            <Flex gap="6" display={{ base: 'none', lg: 'flex' }}>
                 {links.map(link => (
                     <Link key={link.route} href={link.route} passHref>
                         <Text
