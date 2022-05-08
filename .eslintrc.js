@@ -32,15 +32,6 @@ module.exports = {
         'array-bracket-spacing': 'error',
         'computed-property-spacing': ['error', 'never'],
         curly: 'error',
-        'max-len': [
-            'error',
-            {
-                comments: 120,
-                code: 581,
-                ignorePattern: '^import\\W.*',
-                ignoreTrailingComments: true,
-            },
-        ],
         'no-lonely-if': 'error',
         // 'no-nested-ternary': 'error',
         'no-unneeded-ternary': 'error',

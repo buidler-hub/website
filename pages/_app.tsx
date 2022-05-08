@@ -1,11 +1,11 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import '@fontsource/syncopate';
+import { NextPage } from 'next';
 import { AppProps } from 'next/app';
-import NextNProgress from 'nextjs-progressbar';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
     return (
         <ChakraProvider>
-            <NextNProgress color="#000" options={{ showSpinnner: false }} />
             <Component {...pageProps} />
         </ChakraProvider>
     );
