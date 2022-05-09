@@ -6,7 +6,7 @@ import type { NextPage } from 'next';
 
 const Team: NextPage = () => {
     return (
-        <VStack w="100vw" minH="100vh" fontFamily="syncopate" bg="black">
+        <VStack w="100vw" minH="100vh" bg="black">
             <Header />
             <Hero />
             <Footer />
