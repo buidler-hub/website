@@ -1,7 +1,6 @@
 import '../styles/fonts.css';
 import theme from '../styles/theme.chakra';
 import { ChakraProvider } from '@chakra-ui/react';
-import '@fontsource/syncopate';
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
@@ -20,7 +19,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
                         strategy="lazyOnload"
                     />
                 )}
-            <NextNProgress />
+            <NextNProgress options={{ showSpinner: false }} />
             <ChakraProvider theme={theme}>
                 <Component {...pageProps} />
             </ChakraProvider>
