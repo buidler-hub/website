@@ -15,7 +15,7 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
-        "@chakra-ui/react": "^1.8.8",
+        "@chakra-ui/react": "2.1.2",
         "@emotion/react": "^11.9.0",
         "@emotion/styled": "^11.8.1",
         "framer-motion": "^6.3.3",
