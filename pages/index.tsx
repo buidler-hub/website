@@ -1,22 +1,11 @@
-import Header from '../components/Header';
-import Hero from '../components/Home/Hero';
-import { VStack } from '@chakra-ui/react';
-import { FC } from 'react';
+import { Header } from '../components';
+import type { NextPage } from 'next';
 
-const Home: FC = () => {
+const Home: NextPage = () => {
     return (
-        <VStack
-            minW="100vw"
-            minH="100vh"
-            overflowX="hidden"
-            gap="28"
-            bg="#010101"
-            fontFamily="Monument Extended"
-            fontWeight="extrabold"
-        >
+        <>
             <Header />
-            <Hero />
-        </VStack>
+        </>
     );
 };
 
