@@ -1,6 +1,7 @@
-import '../styles/fonts.css';
 import theme from '../styles/theme.chakra';
 import { ChakraProvider } from '@chakra-ui/react';
+import '@fontsource/lexend';
+import '@fontsource/red-hat-display';
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
