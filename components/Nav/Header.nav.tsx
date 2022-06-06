@@ -18,7 +18,7 @@ const Header: NextComponentType<NextPageContext> = () => {
             position="fixed"
         >
             <Text fontWeight="600" fontSize="xl">
-                Builder&apos;sHub
+                BuildersHub
             </Text>
 
             <Flex
