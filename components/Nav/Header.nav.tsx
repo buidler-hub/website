@@ -1,28 +1,9 @@
-import { HeaderOption, JoinButton } from './Header.components';
+import { NavOption, JoinButton } from './Nav.components';
+import navOptions from './navOptions';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import type { NextComponentType, NextPageContext } from 'next';
 
 const Header: NextComponentType<NextPageContext> = () => {
-    const headerOptions = [
-        {
-            href: '/',
-            label: 'Home',
-        },
-        {
-            href: '/projects',
-            label: 'Our Projects',
-        },
-        {
-            href: '/team',
-            label: 'Team',
-        },
-        {
-            isExternal: true,
-            href: 'https://github.com/buidler-hub/',
-            label: 'Github',
-        },
-    ];
-
     return (
         <Box
             w="full"
@@ -40,13 +21,16 @@ const Header: NextComponentType<NextPageContext> = () => {
                 Builder&apos;sHub
             </Text>
 
-            <Flex dir="row" gap="4" fontWeight="600">
-                {headerOptions.map(option => (
-                    <HeaderOption key={option.label} {...option} />
+            <Flex
+                gap="4"
+                fontWeight="600"
+                display={{ base: 'none', md: 'flex' }}
+            >
+                {navOptions.map(option => (
+                    <NavOption key={option.label} {...option} />
                 ))}
             </Flex>
-
-            <JoinButton />
+            <JoinButton display={{ base: 'none', md: 'flex' }} />
         </Box>
     );
 };

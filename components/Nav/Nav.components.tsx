@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { FaDiscord } from 'react-icons/fa';
 
-const JoinButton = () => {
+const JoinButton = ({ ...otherProps }) => {
     return (
         <ChakraLink href="https://discord.gg/buidlershub" isExternal>
             <Button
@@ -22,6 +22,7 @@ const JoinButton = () => {
                     bg: 'rgba(255, 255, 255, 0.7)',
                 }}
                 backdropFilter="blur(10px)"
+                {...otherProps}
             >
                 <FaDiscord size="22" />
                 Join Discord
@@ -30,13 +31,13 @@ const JoinButton = () => {
     );
 };
 
-interface IHeaderOption {
+interface INavOption {
     isExternal?: boolean;
     href: string;
     label: string;
 }
 
-const HeaderOption: FC<IHeaderOption> = ({ isExternal, href, label }) => {
+const NavOption: FC<INavOption> = ({ isExternal, href, label }) => {
     return (
         <>
             {isExternal ? (
@@ -65,4 +66,4 @@ const HeaderOption: FC<IHeaderOption> = ({ isExternal, href, label }) => {
     );
 };
 
-export { JoinButton, HeaderOption };
+export { JoinButton, NavOption };

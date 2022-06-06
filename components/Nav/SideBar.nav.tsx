@@ -1,85 +1,56 @@
-import { Box, Text, Link as ChakraLink, Button } from '@chakra-ui/react';
+import { NavOption, JoinButton } from './Nav.components';
+import navOptions from './navOptions';
+import { Box, Flex } from '@chakra-ui/react';
 import { NextComponentType } from 'next';
-import { FaDiscord } from 'react-icons/fa';
-import { IoIosArrowBack } from 'react-icons/io';
+import { useState } from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const SideBar: NextComponentType = () => {
+    const [showSidebar, setShowSidebar] = useState(false);
+
     return (
         <>
+            {!showSidebar && (
+                <Box
+                    pos="absolute"
+                    top="4"
+                    right="4"
+                    zIndex="10"
+                    onClick={() => setShowSidebar(true)}
+                    display={{ base: 'flex', md: 'none' }}
+                >
+                    <GiHamburgerMenu size="1.5rem" />
+                </Box>
+            )}
             <Box
-                w="48"
-                bgColor="#ffffff66"
+                w="56"
+                bg="rgba(255,255,255,0.95)"
                 minH="100vh"
                 right="0"
                 top="0"
                 zIndex="10"
-                position="absolute"
-                display="flex"
+                position="fixed"
+                display={{ base: 'flex', md: 'none' }}
                 flexDir="column"
-                alignItems="center"
-                justifyContent="center"
-                textAlign="center"
-                fontFamily="redHat"
-                fontWeight="700"
-                fontSize="lg"
                 gap="4"
+                justifyContent="center"
+                px="4"
+                transform={showSidebar ? 'translateX(0)' : 'translateX(100%)'}
+                transition="all 0.3s ease-in-out"
             >
-                <Box
-                    minH="100vh"
-                    w="3"
-                    bgColor="#ffffff66"
-                    position="absolute"
-                    left="0"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                >
-                    <Box
-                        h="7"
-                        w="7"
-                        rounded="full"
-                        bgColor="black"
-                        position="absolute"
-                        display="grid"
-                        placeItems="center"
-                        border="3px solid"
-                        borderColor="white"
-                        cursor="pointer"
-                        textColor="white"
-                    >
-                        <IoIosArrowBack size="18" />
-                    </Box>
+                <Box pos="absolute" top="4" right="4">
+                    <AiOutlineClose
+                        size="2rem"
+                        onClick={() => setShowSidebar(false)}
+                    />
                 </Box>
-
-                <Text>Home</Text>
-                <Text>Our Projects</Text>
-                <Text>GitHub</Text>
-                <Text>Team</Text>
-
-                <ChakraLink href="https://discord.gg/buidlershub" isExternal>
-                    <Button
-                        display="flex"
-                        flexDir="row"
-                        gap="3"
-                        alignItems="center"
-                        justifyContent="center"
-                        rounded="full"
-                        h="10"
-                        px="5"
-                        fontFamily="lexend"
-                        fontWeight="600"
-                        _focus={{}}
-                        _active={{}}
-                        bg="rgba(255, 255, 255, 0.5)"
-                        _hover={{
-                            bg: 'rgba(255, 255, 255, 0.7)',
-                        }}
-                        backdropFilter="blur(10px)"
-                    >
-                        <FaDiscord size="22" />
-                        Join Discord
-                    </Button>
-                </ChakraLink>
+                <Flex align="start" direction="column" gap="4" fontWeight="600">
+                    {navOptions.map(option => (
+                        <NavOption key={option.label} {...option} />
+                    ))}
+                    <JoinButton />
+                </Flex>
             </Box>
         </>
     );
