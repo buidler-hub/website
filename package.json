@@ -15,19 +15,19 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
-        "@chakra-ui/react": "^2.1.2",
-        "@emotion/react": "^11.9.0",
-        "@emotion/styled": "^11.8.1",
-        "@fontsource/lexend": "^4.5.10",
-        "@fontsource/red-hat-display": "^4.5.9",
-        "@fontsource/spartan": "^4.5.8",
-        "framer-motion": "^6.3.10",
-        "next": "^12.1.6",
-        "next-seo": "^5.4.0",
-        "nextjs-progressbar": "^0.0.14",
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0",
-        "react-icons": "^4.4.0"
+        "@chakra-ui/react": "2.1.2",
+        "@emotion/react": "11.9.0",
+        "@emotion/styled": "11.8.1",
+        "@fontsource/lexend": "4.5.10",
+        "@fontsource/red-hat-display": "4.5.9",
+        "@fontsource/spartan": "4.5.8",
+        "framer-motion": "6.3.10",
+        "next": "12.1.6",
+        "next-seo": "5.4.0",
+        "nextjs-progressbar": "0.0.14",
+        "react": "18.1.0",
+        "react-dom": "18.1.0",
+        "react-icons": "4.4.0"
     },
     "devDependencies": {
         "@commitlint/cli": "17.0.2",
