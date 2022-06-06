@@ -5,26 +5,28 @@ import { FaDiscord } from 'react-icons/fa';
 
 const JoinButton = () => {
     return (
-        <Button
-            display="flex"
-            flexDir="row"
-            gap="3"
-            alignItems="center"
-            justifyContent="center"
-            rounded="full"
-            h="10"
-            px="6"
-            _focus={{}}
-            _active={{}}
-            bg="rgba(255, 255, 255, 0.5)"
-            _hover={{
-                bg: 'rgba(255, 255, 255, 0.7)',
-            }}
-            backdropFilter="blur(10px)"
-        >
-            <FaDiscord size="22" />
-            Join Discord
-        </Button>
+        <ChakraLink href="https://discord.gg/buidlershub" isExternal>
+            <Button
+                display="flex"
+                flexDir="row"
+                gap="3"
+                alignItems="center"
+                justifyContent="center"
+                rounded="full"
+                h="10"
+                px="6"
+                _focus={{}}
+                _active={{}}
+                bg="rgba(255, 255, 255, 0.5)"
+                _hover={{
+                    bg: 'rgba(255, 255, 255, 0.7)',
+                }}
+                backdropFilter="blur(10px)"
+            >
+                <FaDiscord size="22" />
+                Join Discord
+            </Button>
+        </ChakraLink>
     );
 };
 

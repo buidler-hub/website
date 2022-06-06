@@ -30,6 +30,7 @@ const TeamCard: FC<ITeamCardProps> = ({
             >
                 <Box width="200px" height="200px" pos="relative" rounded="lg">
                     <Image
+                        objectFit="cover"
                         style={{ borderRadius: '6px' }}
                         alt={name}
                         src={image}
