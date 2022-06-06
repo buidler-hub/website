@@ -1,3 +1,4 @@
+import Header from '../Nav/Header.nav';
 import { Box } from '@chakra-ui/react';
 import { FC, ReactNode } from 'react';
 
@@ -19,6 +20,7 @@ const Layout: FC<ILayoutProps> = ({ children }) => {
                 backgroundImage: 'url(/assets/bg.svg)',
             }}
         >
+            <Header />
             {children}
         </Box>
     );
