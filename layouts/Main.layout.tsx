@@ -1,4 +1,4 @@
-import Header from '../Nav/Header.nav';
+import { Header, SideBar } from '../components';
 import { Box } from '@chakra-ui/react';
 import { FC, ReactNode } from 'react';
 
@@ -9,19 +9,20 @@ interface ILayoutProps {
 const Layout: FC<ILayoutProps> = ({ children }) => {
     return (
         <Box
+            display="flex"
+            flexDir="column"
             minH="100vh"
             minW="full"
             overflowX="hidden"
             bgSize="cover"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
             style={{
                 backgroundImage: 'url(/assets/bg.svg)',
             }}
         >
             <Header />
             {children}
+
+            <SideBar />
         </Box>
     );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <Box display="flex" flexDir="column" gap="10">
+        <Box display="flex" flexDir="column" gap="10" margin="auto">
             <Text
                 align="center"
                 fontFamily="spartan"
