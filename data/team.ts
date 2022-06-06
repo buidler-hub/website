@@ -22,7 +22,7 @@ const team = [
     },
     {
         name: 'Mukesh',
-        image: '/team/mukesh.png',
+        image: '/team/Mukesh.png',
         github: 'https://github.com/mukesh272921',
         twitter: 'https://twitter.com/mukesh_272921',
         website: 'https://mukeshdev.xyz',
