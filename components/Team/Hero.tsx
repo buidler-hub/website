@@ -9,9 +9,9 @@ const Hero: NextComponentType = () => {
             <Text
                 as="h1"
                 fontFamily="spartan"
-                fontSize="48px"
+                fontSize="40px"
                 fontWeight="extrabold"
-                mb="10"
+                my="10"
                 align="center"
             >
                 Our Team
