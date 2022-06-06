@@ -1,5 +1,5 @@
-import Layout from '../components/Layout';
 import Hero from '../components/Team/Hero';
+import Layout from '../layouts/Main.layout';
 import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 

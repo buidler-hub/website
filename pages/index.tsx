@@ -1,5 +1,5 @@
 import Hero from '../components/Home/Hero';
-import Layout from '../components/Layout';
+import Layout from '../layouts/Main.layout';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
