@@ -15,23 +15,24 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
     return (
         <>
             <NextSeo
-                canonical=""
-                description=""
+                canonical="https://buidlershub.vercel.app/"
+                description="This is a hub for amazing products crafted by our team!"
                 openGraph={{
-                    description: '',
+                    description:
+                        'This is a hub for amazing products crafted by our team!',
                     images: [],
-                    title: '',
-                    url: '',
+                    title: 'Buidlers Hub',
+                    url: 'https://buidlershub.vercel.app/',
                 }}
-                title=""
+                title="Buidlers Hub"
                 twitter={{
                     cardType: 'summary_large_image',
                     handle: '@buidlershub',
                     site: '@buidlershub',
                 }}
             />
-            <NextNProgress options={{ showSpinner: false }} />
             <ChakraProvider theme={theme}>
+                <NextNProgress options={{ showSpinner: false }} />
                 <Component {...pageProps} />
             </ChakraProvider>
         </>
