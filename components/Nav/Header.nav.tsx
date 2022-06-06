@@ -1,5 +1,5 @@
 import { HeaderOption, JoinButton } from './Header.components';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, Show, Hide } from '@chakra-ui/react';
 import type { NextComponentType, NextPageContext } from 'next';
 
 const Header: NextComponentType<NextPageContext> = () => {
@@ -39,8 +39,12 @@ const Header: NextComponentType<NextPageContext> = () => {
             <Text fontWeight="600" fontSize="xl">
                 Builder&apos;sHub
             </Text>
-
-            <Flex dir="row" gap="4" fontWeight="600">
+            <Flex
+                dir="row"
+                gap="4"
+                fontWeight="600"
+                fontSize={{ base: 0, md: 'md' }}
+            >
                 {headerOptions.map(option => (
                     <HeaderOption key={option.label} {...option} />
                 ))}
