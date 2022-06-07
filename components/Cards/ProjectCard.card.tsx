@@ -13,6 +13,7 @@ const ProjectCard: NextComponentType<NextPageContext, {}, Props> = () => {
             w="72"
             bgColor="white"
             m="20"
+            fontFamily="argentum"
         >
             <Box
                 h="32"
@@ -44,11 +45,11 @@ const ProjectCard: NextComponentType<NextPageContext, {}, Props> = () => {
                 mt="24"
             ></Box>
 
-            <Text ml="6" fontSize="xl" fontFamily="redHat" mt="12">
+            <Text ml="6" fontSize="xl" mt="12" fontWeight="500">
                 Title
             </Text>
 
-            <Text ml="6" fontSize="md" fontFamily="redHat" mt="2">
+            <Text ml="6" fontSize="md" mt="2" fontWeight="400">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Molestias
             </Text>

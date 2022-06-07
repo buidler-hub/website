@@ -8,7 +8,7 @@ const theme = extendTheme({
         lexend: "'Lexend', sans-serif",
         spartan: "'Spartan', sans-serif",
         redHat: "'Red Hat Display', sans-serif",
-        MonumentExtended: 'Monument Extended',
+        argentum: "'Argentum', sans-serif",
     },
 });
 
