@@ -1,7 +1,6 @@
-import { Box, Button } from '@chakra-ui/react';
-import type { NextComponentType } from 'next';
+import { Box, Button, Link } from '@chakra-ui/react';
 
-const TagOne: NextComponentType = () => {
+const TagOne = ({ tag }: { tag: string }) => {
     return (
         <Box
             w="28"
@@ -17,12 +16,12 @@ const TagOne: NextComponentType = () => {
             textColor="white"
             fontWeight="400"
         >
-            #web3
+            {tag}
         </Box>
     );
 };
 
-const TagTwo: NextComponentType = () => {
+const TagTwo = ({ platform }: { platform: string }) => {
     return (
         <Box
             h="8"
@@ -38,27 +37,29 @@ const TagTwo: NextComponentType = () => {
             borderColor="green.200"
             cursor="pointer"
         >
-            web
+            {platform}
         </Box>
     );
 };
 
-const GithubButton: NextComponentType = () => {
+const LinkButton = ({ url, text }: { url: string; text: string }) => {
     return (
-        <Button
-            w="32"
-            h="9"
-            bgColor="#E5E7EBB2"
-            border="2px solid"
-            borderColor="#D1D5DBB2"
-            _hover={{ bgColor: '#D1D5DBB2' }}
-            _focus={{}}
-            _active={{}}
-            transition="all 0.2s"
-        >
-            GitHub
-        </Button>
+        <Link href={url} isExternal>
+            <Button
+                w="28"
+                h="9"
+                bgColor="#E5E7EBB2"
+                border="2px solid"
+                borderColor="#D1D5DBB2"
+                _hover={{ bgColor: '#D1D5DBB2' }}
+                _focus={{}}
+                _active={{}}
+                transition="all 0.2s"
+            >
+                {text}
+            </Button>
+        </Link>
     );
 };
 
-export { TagOne, TagTwo, GithubButton };
+export { TagOne, TagTwo, LinkButton };

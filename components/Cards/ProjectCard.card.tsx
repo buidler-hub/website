@@ -1,10 +1,16 @@
-import { GithubButton, TagOne, TagTwo } from '../Misc/ProjectCard.componnets';
+import { ProjectProps } from '../../@types/projectprops.types';
+import { LinkButton, TagOne, TagTwo } from '../Misc/ProjectCard.componnets';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import type { NextComponentType, NextPageContext } from 'next';
 
-interface Props {}
-
-const ProjectCard: NextComponentType<NextPageContext, {}, Props> = () => {
+const ProjectCard: NextComponentType<NextPageContext, {}, ProjectProps> = ({
+    title,
+    desc,
+    tag,
+    platform,
+    ghUrl,
+    phUrl,
+}) => {
     return (
         <Box
             display="flex"
@@ -13,7 +19,6 @@ const ProjectCard: NextComponentType<NextPageContext, {}, Props> = () => {
             h="22rem"
             w="72"
             bgColor="white"
-            m="20"
             fontFamily="lexend"
             overflow="hidden"
         >
@@ -23,7 +28,7 @@ const ProjectCard: NextComponentType<NextPageContext, {}, Props> = () => {
                 roundedTop="lg"
                 bgGradient="linear(90deg, #DA22FF 0%, #9733EE 100%)"
             >
-                <TagOne />
+                <TagOne tag={tag} />
             </Box>
             <Flex
                 mt="5.5rem"
@@ -42,20 +47,27 @@ const ProjectCard: NextComponentType<NextPageContext, {}, Props> = () => {
                     ml="6"
                 ></Box>
 
-                <TagTwo />
+                <TagTwo platform={platform} />
             </Flex>
 
             <Box>
                 <Text ml="6" fontSize="xl" mt="12" fontWeight="500">
-                    Title
+                    {title}
                 </Text>
 
                 <Text ml="6" fontSize="md" mt="2" fontWeight="400">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Molestias
+                    {desc}
                 </Text>
-                <Flex w="full" justifyContent="space-between" px="6" py="2">
-                    <GithubButton />
+                <Flex
+                    w="full"
+                    justifyContent="space-between"
+                    px="6"
+                    py="2"
+                    alignItems="center"
+                >
+                    <LinkButton text="GitHub" url={ghUrl} />
+
+                    <LinkButton text="Upvote" url={phUrl} />
                 </Flex>
             </Box>
         </Box>
