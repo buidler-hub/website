@@ -1,11 +1,11 @@
-interface ProjectProps {
+interface IProjectProps {
     title: string;
-    desc: string;
+    description: string;
     logo: string;
     tag: string;
-    platform: 'web' | 'cli';
-    ghUrl: string;
-    phUrl: string;
+    platform: 'web' | 'cli' | 'discord' | 'web | cli';
+    GitHub: string;
+    ProductHunt: string;
 }
 
-export type { ProjectProps };
+export type { IProjectProps };

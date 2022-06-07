@@ -1,22 +1,28 @@
-import { ProjectProps } from '../../@types/projectprops.types';
-import { LinkButton, TagOne, TagTwo } from '../Misc/ProjectCard.componnets';
+import { IProjectProps } from '../../@types/projectProps.types';
+import {
+    LinkButton,
+    Logo,
+    TagOne,
+    TagTwo,
+} from '../Misc/ProjectCard.components';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import type { NextComponentType, NextPageContext } from 'next';
 
-const ProjectCard: NextComponentType<NextPageContext, {}, ProjectProps> = ({
+const ProjectCard: NextComponentType<NextPageContext, {}, IProjectProps> = ({
     title,
-    desc,
+    description,
+    logo,
     tag,
     platform,
-    ghUrl,
-    phUrl,
+    GitHub,
+    ProductHunt,
 }) => {
     return (
         <Box
             display="flex"
             flexDir="column"
             rounded="lg"
-            h="22rem"
+            h="24rem"
             w="72"
             bgColor="white"
             fontFamily="lexend"
@@ -30,6 +36,7 @@ const ProjectCard: NextComponentType<NextPageContext, {}, ProjectProps> = ({
             >
                 <TagOne tag={tag} />
             </Box>
+
             <Flex
                 mt="5.5rem"
                 position="absolute"
@@ -37,16 +44,7 @@ const ProjectCard: NextComponentType<NextPageContext, {}, ProjectProps> = ({
                 w="72"
                 alignItems="center"
             >
-                <Box
-                    h="20"
-                    w="20"
-                    rounded="full"
-                    border="3px solid"
-                    borderColor="white"
-                    bgGradient="linear(90deg, #00F5A0 0%, #00D9F5 100%)"
-                    ml="6"
-                ></Box>
-
+                <Logo logo={logo} title={title} />
                 <TagTwo platform={platform} />
             </Flex>
 
@@ -55,9 +53,10 @@ const ProjectCard: NextComponentType<NextPageContext, {}, ProjectProps> = ({
                     {title}
                 </Text>
 
-                <Text ml="6" fontSize="md" mt="2" fontWeight="400">
-                    {desc}
+                <Text m="6" fontSize="md" my="2" fontWeight="400">
+                    {description}
                 </Text>
+
                 <Flex
                     w="full"
                     justifyContent="space-between"
@@ -65,9 +64,8 @@ const ProjectCard: NextComponentType<NextPageContext, {}, ProjectProps> = ({
                     py="2"
                     alignItems="center"
                 >
-                    <LinkButton text="GitHub" url={ghUrl} />
-
-                    <LinkButton text="Upvote" url={phUrl} />
+                    <LinkButton text="GitHub" url={GitHub} />
+                    <LinkButton text="Upvote" url={ProductHunt} />
                 </Flex>
             </Box>
         </Box>

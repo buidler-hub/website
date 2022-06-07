@@ -1,4 +1,4 @@
-import { Socials } from './Team.components';
+import { Socials } from '../Team/Team.components';
 import { Box, Flex, Link, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { FC } from 'react';

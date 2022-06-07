@@ -1,4 +1,6 @@
 import { Box, Button, Link } from '@chakra-ui/react';
+import Image from 'next/image';
+import { FC } from 'react';
 
 const TagOne = ({ tag }: { tag: string }) => {
     return (
@@ -62,4 +64,32 @@ const LinkButton = ({ url, text }: { url: string; text: string }) => {
     );
 };
 
-export { TagOne, TagTwo, LinkButton };
+interface ILogoProps {
+    logo: string;
+    title: string;
+}
+
+const Logo: FC<ILogoProps> = ({ logo, title }) => {
+    return (
+        <Box
+            h="20"
+            w="20"
+            rounded="full"
+            border="3px solid"
+            borderColor="white"
+            ml="3"
+            pos="relative"
+        >
+            <Image
+                style={{
+                    borderRadius: '50%',
+                }}
+                src={logo}
+                alt={title}
+                layout="fill"
+            />
+        </Box>
+    );
+};
+
+export { TagOne, TagTwo, LinkButton, Logo };

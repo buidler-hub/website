@@ -1,5 +1,5 @@
 import team from '../../data/team';
-import TeamCard from './Team.card';
+import TeamCard from '../Cards/Team.card';
 import { Flex, Text, VStack } from '@chakra-ui/react';
 import type { NextComponentType } from 'next';
 
