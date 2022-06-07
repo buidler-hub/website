@@ -22,7 +22,15 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
                 openGraph={{
                     description:
                         'This is a hub for amazing products crafted by our team!',
-                    images: [],
+                    images: [
+                        {
+                            height: 640,
+                            url: '/assets/banner.png',
+                            alt: 'Buidlers Hub',
+                            type: 'image/png',
+                            width: 1280,
+                        },
+                    ],
                     title: 'Buidlers Hub',
                     url: 'https://buidlershub.vercel.app/',
                 }}
