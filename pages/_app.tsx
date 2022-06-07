@@ -1,5 +1,7 @@
 import theme from '../styles/theme.chakra';
 import { ChakraProvider } from '@chakra-ui/react';
+import '@fontsource/lexend/400.css';
+import '@fontsource/lexend/500.css';
 import '@fontsource/lexend/600.css';
 import '@fontsource/lexend/700.css';
 import '@fontsource/red-hat-display/500.css';
@@ -24,15 +26,15 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
                         {
                             height: 640,
                             url: '/assets/banner.png',
-                            alt: 'Buidlers Hub',
+                            alt: "Buidler's Hub",
                             type: 'image/png',
                             width: 1280,
                         },
                     ],
-                    title: 'Buidlers Hub',
+                    title: "Buidler's Hub",
                     url: 'https://buidlershub.vercel.app/',
                 }}
-                title="Buidlers Hub"
+                title="Buidler's Hub"
                 twitter={{
                     cardType: 'summary_large_image',
                     handle: '@buidlershub',
