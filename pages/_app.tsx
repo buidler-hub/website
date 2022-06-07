@@ -1,6 +1,7 @@
-import '../styles/fonts.css';
 import theme from '../styles/theme.chakra';
 import { ChakraProvider } from '@chakra-ui/react';
+import '@fontsource/lexend/400.css';
+import '@fontsource/lexend/500.css';
 import '@fontsource/lexend/600.css';
 import '@fontsource/lexend/700.css';
 import '@fontsource/red-hat-display/500.css';
