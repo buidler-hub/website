@@ -21,7 +21,7 @@
         "@fontsource/lexend": "4.5.10",
         "@fontsource/red-hat-display": "4.5.9",
         "@fontsource/spartan": "4.5.8",
-        "framer-motion": "6.3.10",
+        "framer-motion": "6.3.11",
         "next": "12.1.6",
         "next-seo": "5.4.0",
         "nextjs-progressbar": "0.0.14",
