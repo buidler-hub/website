@@ -12,7 +12,8 @@
         "release:patch": "standard-version --release-as patch",
         "release:major": "standard-version --release-as major",
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "postbuild": "next-sitemap"
     },
     "dependencies": {
         "@chakra-ui/react": "2.2.1",
@@ -24,6 +25,7 @@
         "framer-motion": "6.3.11",
         "next": "12.1.6",
         "next-seo": "5.4.0",
+        "next-sitemap": "^3.0.5",
         "nextjs-progressbar": "0.0.14",
         "react": "18.1.0",
         "react-dom": "18.1.0",

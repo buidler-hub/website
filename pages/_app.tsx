@@ -17,7 +17,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
     return (
         <>
             <NextSeo
-                canonical="https://buidlershub.vercel.app/"
+                canonical="https://buidlershub.xyz/"
                 description="This is a hub for amazing products crafted by our team!"
                 openGraph={{
                     description:
@@ -32,7 +32,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
                         },
                     ],
                     title: "Buidler's Hub",
-                    url: 'https://buidlershub.vercel.app/',
+                    url: 'https://buidlershub.xyz/',
                 }}
                 title="Buidler's Hub"
                 twitter={{

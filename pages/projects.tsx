@@ -3,10 +3,15 @@ import projects from '../data/projects';
 import Layout from '../layouts/Main.layout';
 import { Box } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 
 const ProjectsPage: NextPage = () => {
     return (
         <Layout>
+            <NextSeo
+                title="Projects"
+                canonical="https://buidlershub.xyz/projects"
+            />
             <Box
                 minH="100vh"
                 minW="full"
