@@ -1,4 +1,5 @@
 import { Box, Button, Center, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 
 const Hero = () => {
@@ -16,18 +17,20 @@ const Hero = () => {
                 by our Team
             </Text>
             <Center>
-                <Button
-                    h="12"
-                    colorScheme="messenger"
-                    w="44"
-                    fontFamily="lexend"
-                    fontWeight="600"
-                    fontSize="xl"
-                    _active={{}}
-                    _focus={{}}
-                >
-                    Projects
-                </Button>
+                <Link href="/projects">
+                    <Button
+                        h="12"
+                        colorScheme="purple"
+                        w="44"
+                        fontFamily="lexend"
+                        fontWeight="600"
+                        fontSize="xl"
+                        _active={{}}
+                        _focus={{}}
+                    >
+                        Projects
+                    </Button>
+                </Link>
             </Center>
         </Box>
     );

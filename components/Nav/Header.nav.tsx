@@ -2,6 +2,7 @@ import { NavOption, JoinButton } from './Nav.components';
 import navOptions from './navOptions';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import type { NextComponentType, NextPageContext } from 'next';
+import Link from 'next/link';
 
 const Header: NextComponentType<NextPageContext> = () => {
     return (
@@ -17,9 +18,11 @@ const Header: NextComponentType<NextPageContext> = () => {
             top="0"
             position="fixed"
         >
-            <Text fontWeight="600" fontSize="xl">
-                Builder&apos;s Hub
-            </Text>
+            <Link href="/">
+                <Text fontWeight="600" fontSize="xl" cursor="pointer">
+                    Buidler&apos;s Hub
+                </Text>
+            </Link>
 
             <Flex
                 gap="4"

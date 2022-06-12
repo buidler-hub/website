@@ -42,7 +42,10 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
                 }}
             />
             <ChakraProvider theme={theme}>
-                <NextNProgress options={{ showSpinner: false }} />
+                <NextNProgress
+                    options={{ showSpinner: false }}
+                    color="#805AD5"
+                />
                 <Component {...pageProps} />
             </ChakraProvider>
         </>

@@ -15,13 +15,13 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
-        "@chakra-ui/react": "2.2.0",
+        "@chakra-ui/react": "2.2.1",
         "@emotion/react": "11.9.0",
         "@emotion/styled": "11.8.1",
         "@fontsource/lexend": "4.5.10",
         "@fontsource/red-hat-display": "4.5.9",
         "@fontsource/spartan": "4.5.8",
-        "framer-motion": "6.3.10",
+        "framer-motion": "6.3.11",
         "next": "12.1.6",
         "next-seo": "5.4.0",
         "nextjs-progressbar": "0.0.14",
