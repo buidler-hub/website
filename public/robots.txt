@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.buidlershub.xyz
+
+# Sitemaps
+Sitemap: https://www.buidlershub.xyz/sitemap.xml
