@@ -16,7 +16,6 @@ const Header: NextComponentType<NextPageContext> = () => {
             px="10"
             py="4"
             top="0"
-            position="fixed"
         >
             <Link href="/">
                 <Text fontWeight="600" fontSize="xl" cursor="pointer">
