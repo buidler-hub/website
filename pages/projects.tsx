@@ -13,8 +13,8 @@ const ProjectsPage: NextPage = () => {
                 canonical="https://buidlershub.xyz/projects"
             />
             <Box
-                minH="100vh"
                 minW="full"
+                py="20"
                 display="flex"
                 flexDir="row"
                 gap="10"
