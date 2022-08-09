@@ -27,8 +27,8 @@
         "next-seo": "5.4.0",
         "next-sitemap": "3.0.5",
         "nextjs-progressbar": "0.0.14",
-        "react": "18.1.0",
-        "react-dom": "18.1.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
         "react-icons": "4.4.0"
     },
     "devDependencies": {
@@ -43,7 +43,7 @@
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-prettier": "4.0.0",
         "eslint-plugin-react": "7.30.0",
-        "eslint-plugin-react-hooks": "4.5.0",
+        "eslint-plugin-react-hooks": "4.6.0",
         "husky": "8.0.1",
         "prettier": "2.6.2",
         "standard-version": "9.5.0",
