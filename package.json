@@ -32,11 +32,11 @@
         "react-icons": "4.4.0"
     },
     "devDependencies": {
-        "@commitlint/cli": "17.0.2",
-        "@commitlint/config-conventional": "17.0.2",
+        "@commitlint/cli": "17.1.2",
+        "@commitlint/config-conventional": "17.1.0",
         "@trivago/prettier-plugin-sort-imports": "3.2.0",
         "@types/react": "18.0.12",
-        "commitlint": "17.0.2",
+        "commitlint": "17.1.2",
         "commitlint-config-gitmoji": "2.2.5",
         "eslint": "8.17.0",
         "eslint-config-next": "12.1.6",
