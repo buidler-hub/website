@@ -17,8 +17,8 @@
     },
     "dependencies": {
         "@chakra-ui/react": "2.2.1",
-        "@emotion/react": "11.9.0",
-        "@emotion/styled": "11.8.1",
+        "@emotion/react": "11.10.4",
+        "@emotion/styled": "11.10.4",
         "@fontsource/lexend": "4.5.10",
         "@fontsource/red-hat-display": "4.5.9",
         "@fontsource/spartan": "4.5.8",
